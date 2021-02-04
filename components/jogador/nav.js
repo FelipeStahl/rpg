@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import User from "../user"
+import DinheiroXP from "./dinheiroXP";
 // components
 
 export default function Nav() {
@@ -16,8 +17,10 @@ export default function Nav() {
               >
                 Gerador RPG
               </a>
+              <div className="inline-flex lg:hidden">
+                <DinheiroXP/>
             <button
-              className="cursor-pointer text-white text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="cursor-pointer text-white text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block outline-none focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -63,7 +66,9 @@ export default function Nav() {
                 />
               </svg>
             </button>
+              </div>
           </div>
+          
           <div
             className={
               "lg:flex flex-grow items-center bg-transparent lg:shadow-none" +
@@ -105,10 +110,14 @@ export default function Nav() {
                 </a>
               </li>
             </ul>
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+            
+            <ul className="flex flex-col list-none lg:flex-row lg:ml-auto">
+              <div className="hidden lg:inline-flex">
+                <DinheiroXP/>
+              </div>
               <User/>
             </ul>
-          </div>
+          </div>        
         </div>
       </nav>
     </>
