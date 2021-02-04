@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export default function User() {
@@ -78,13 +79,15 @@ export default function User() {
         >
           Configurações
         </a>
-        <a
-          href="#"
-          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-          role="menuitem"
-        >
-          Sair
-        </a>
+        <Link href="/login">
+          <a
+            href="#"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            role="menuitem"
+          >
+            Sair
+          </a>
+        </Link>
       </div>
     </div>
   );

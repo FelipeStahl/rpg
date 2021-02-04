@@ -9,6 +9,7 @@ import Inventario from "../../components/jogador/inventario";
 import Modal from "../../components/modal";
 import { useState } from "react";
 import Personagem from "../../components/jogador/personagem";
+import Chat from "../../components/chat";
 
 export default function Sala() {
   const [showModal, setShowModal] = useState(false);
@@ -95,8 +96,11 @@ export default function Sala() {
         <div className="grid mt-8">
           <div className="col-12 bg-gray-100  text-gray-800 bg-opacity-60" id="nivel">
             <div className="p-4">
-              <div className="grid grid-cols-1">
-                <Personagem/>
+              <div className="grid lg:grid-cols-3 gap-4">
+                <div className="lg:col-span-2">
+                  <Personagem />
+                </div>
+                <Chat/>
               </div>
             </div>
           </div>
