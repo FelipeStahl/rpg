@@ -17,7 +17,7 @@ export default function CardSkill({nome, valor}) {
               {nome}
             </div>
           </div>
-          <div className="flex">
+          <div className="flex justify-center">
             <button
               onClick={() => setNum(num - 1)}
               className="w-10 text-gray-600 hover:text-gray-500 hover:bg-gray-100 rounded-l cursor-pointer outline-none"
